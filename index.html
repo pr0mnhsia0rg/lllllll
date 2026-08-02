@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Περιστροφή</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Το κινούμενο τετράγωνο */
+    #loader {
+      width: 50px;
+      height: 50px;
+      background-color: orange;
+      border: 3px solid blue;
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Το τελικό μαύρο τετράγωνο */
+    #blackBox {
+      display: none;
+      width: 150px;
+      height: 150px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loader"></div>
+
+
+<div id="blackBox">
+
+<div style="font-size:20px;color:red;margin-top:240px;">good mornig</div>
+  
+</div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("blackBox").style.display = "block";
+    }, 3000);
+  </script>
+
+</body>
+</html>
